@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const blocoDeNotas = document.getElementById('blocoDeNotas');
     const btnlimparnotas = document.getElementById('btnlimparnotas'); //botão para limpar as notas
     const btnsalvarnotas = document.getElementById('btnsalvarnotas'); //botão para salvar as notas
-
+    const btnpersonalize = document.getElementById('btnpersonalize'); //botão para personalizar a fonte
+    //clique para mudar style
+    btnpersonalize.addEventListener('click', () => {
+        //modo escuro
+        document.body.classList.toggle('modo-escuro'); //adiciona o modo escuro
+    });
+    
     btnlimparnotas.addEventListener('click', () => { //eventlisteners para quando clicado apague
         blocoDeNotas.value = ''; //tirar todo o valor
         localStorage.removeItem('minhaNota'); //apaga o valor q estava armazenado
